@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html ng-app='TTTApp'>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+	<title>Tic Tac Toe</title>
+
+</head>
+
+<body ng-controller="TTTController as game">
+
+	<div class="pop_up" id="player1" ng-show="game.p1wins">
+		<p>Player 1 Wins!</p>
+			<button type="button" ng-click="game.playAgain()">Play Again
+			</button>
+		
+	</div><!--end of container pop up winner 1-->
+		
+	<div class="pop_up" id="player2" ng-show="game.p2wins">
+		<p>Player 2 Wins</p>
+			<button type="button" ng-click="game.playAgain()">Play Again
+			</button>
+		
+	</div><!--end of container pop up winner 2-->
+
+	<div class="pop_up" id="tie" ng-show="game.tie">
+		<p>Tie Game!</p>
+			<button type="button" ng-click="game.playAgain()">Play Again
+			</button>
+		
+	</div><!--end of container pop up tied-->
+	
+		<nav>
+			<h1>Tic Tac Lakers</h1>
+		</nav>
+
+
+
+	<div id="main_container">
+			<button id="newGame" type="button" ng-click="game.newGame()">New Game</button>
+
+					<!--------------
+					     Pop ups 
+					---------------->
+
+		<div class="pop_up" id="log_in" ng-show="game.logIn">
+			<input type="text" name="Player1" ng-model ="game.player1Name"><br>
+			<input type="text" name="Player2" ng-model ="game.player2Name"><br>
+			<input type="submit" value="Submit" ng-click="game.signIn()">
+
+		</div>
+			<div class="pop_up" id="charPage" ng-show="game.nextPage">
+			<input type="text" name="Name"><br>
+			<input type="submit" value="Submit" ng-click="game.next()">
+
+		</div>
+
+
+
+		<div class ="score_board" id="player_1">
+		<h1 class="name">{{game.player1Name}}</h1>
+			<h2 class="number" ng-bind ="game.player1Wins">{{game.player1Wins}}</h2>
+		
+		</div> <!--End of score_board 1-->
+			
+		<div id="TTT_box">
+
+			<div class="box" ng-repeat = "box in game.boxes" ng-click="game.click($index)">
+				<h1>{{box.move}}</h1>	
+
+			</div> <!--end of class box containr-->
+		
+		</div> <!--end TTT Box-->
+		
+			
+		
+		<div class ="score_board" id="player_2">
+			<h1 class="name">{{game.player2Name}}</h1>
+			<h2 class ="number" ng-bind ="game.player2Wins">{{game.player2Num}}</h2>
+
+		</div> <!--end of score_board container-->
+
+	</div> <!--End of Main Container-->
+		<!--Sourcing Angular-->
+    <script type="text/javascript" charset="utf-8" src="bower_components/angular/angular.min.js"></script>
+    	<!-- Source in module -->
+    <script type="text/javascript" src="js/main.js"></script>
+    	<!-- Source in controller -->
+    <script type="text/javascript" src="js/TTTController.js"></script>
+ 
+
+</body>
+</html>

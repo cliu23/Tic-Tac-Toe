@@ -1,0 +1,147 @@
+body {
+		background: url("../img/background3.jpg") no-repeat;
+		/*background: url("../img/Simpson_background.jpg") no-repeat;*/
+		background-size: 100% 100%;
+		font-family: 'Lobster', cursive;
+}
+
+
+h1{
+
+}
+
+#main_container {
+	width:1400px;
+	height: 980px;
+	position: relative;
+	margin-top: 100px;
+
+}
+
+#TTT_box {
+	width:567px;
+	height:538px;
+	border-radius: 10px;
+	float:left;
+	background-size: cover;
+	background: url("../img/la_logo.png") no-repeat center  ;
+
+}
+
+.box {
+	background: white;
+	opacity: 0.4;
+	float:left;
+	border: 5px solid black;
+	height: 169px;
+	width: 179px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size:4em;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.box:hover {
+	background: #f6c945;
+	opacity: .9;
+
+}
+
+nav {
+	text-align: center;
+	background: #ffb700;
+	margin-bottom: 30px;
+}
+
+
+
+.score_board {
+	float: left;
+  	height: 400px;
+  	width: 300px;
+  	cursor: pointer;
+  	text-align: center;
+	background-size: 100% 100%;
+	margin-left: 50px;
+	margin-top: 50px;
+	opacity: .4;
+
+}
+
+
+h1 {
+	font-size: 3em;
+	display: inline-block;
+
+}
+
+#player_1 {
+	background-image: url(../img/laker_jeresy.png);
+	margin-right: 50px;
+
+}
+
+#player_2 {
+
+	color:#ffb700;
+	background-image: url(../img/laker_away.png);
+	text-shadow: 5px #FFF;
+}
+
+.name {
+	margin-top: 40px;
+}
+
+.number {
+	margin-top: 75px;
+	font-size: 6em;
+
+}
+
+.score_board:hover {
+	opacity: .9;
+}
+
+
+.pop_up {
+	width: 100%;
+	height: 100%;
+	font-size: 100px;
+	background-color: black;
+	color: white;
+	position: absolute;
+	text-align: center;
+	z-index:100;
+
+}
+
+#log_in {
+	height: 300px;
+	width: 300px;
+	z-index:100;
+	postion: absolute;
+	top: 100px;
+	left: 537px;
+
+}
+
+#charPage{
+  height: 400px;
+  width: 800px;
+  z-index: 100;
+  postion: absolute;
+  top: 100px;
+  left: 290px;
+
+}
+
+#newGame{
+	position: absolute;
+  top: -60px;
+  right: 678px;
+}
+
+#newGame {
+	
+}
