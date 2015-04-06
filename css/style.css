@@ -1,13 +1,12 @@
+				/**************
+					Containers
+				****************/
+
 body {
 		background: url("../img/background3.jpg") no-repeat;
 		/*background: url("../img/Simpson_background.jpg") no-repeat;*/
 		background-size: 100% 100%;
 		font-family: 'Lobster', cursive;
-}
-
-
-h1{
-
 }
 
 #main_container {
@@ -23,10 +22,25 @@ h1{
 	height:538px;
 	border-radius: 10px;
 	float:left;
+	margin-top: 40px;
 	background-size: cover;
-	background: url("../img/la_logo.png") no-repeat center  ;
+	background: url("../img/la_logo2.png") no-repeat center  ;
 
 }
+
+#transparent_page {
+	width:100%;
+	height: 100%;
+	position: absolute;
+	background-color: white;
+	opacity:.6;
+	z-index:100;
+}
+
+				/**************
+				Tic tac toe boxes
+				****************/
+
 
 .box {
 	background: white;
@@ -50,11 +64,29 @@ h1{
 
 nav {
 	text-align: center;
-	background: #ffb700;
+	border-bottom: 1px dotted white;
 	margin-bottom: 30px;
+background: rgb(254,252,234); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
+#navHeader{
+	font-size: 4em;
+	color: #6345a7;
+	text-shadow: -2px 5px 6px #FFF;
 
+}
+
+				/**************
+				Score_board boxes
+				****************/
 
 .score_board {
 	float: left;
@@ -64,17 +96,12 @@ nav {
   	text-align: center;
 	background-size: 100% 100%;
 	margin-left: 50px;
-	margin-top: 50px;
-	opacity: .4;
+	margin-top: 120px;
+	opacity: .6;
+
 
 }
 
-
-h1 {
-	font-size: 3em;
-	display: inline-block;
-
-}
 
 #player_1 {
 	background-image: url(../img/laker_jeresy.png);
@@ -82,37 +109,61 @@ h1 {
 
 }
 
+#player_1_name {
+	color: #391361;
+	text-shadow: 2px 2px #FFF;
+}
+
+#player_1_num {
+	color: #FFF;
+	text-shadow: 5px 5px #391361;
+}
+
+
 #player_2 {
 
 	color:#ffb700;
 	background-image: url(../img/laker_away.png);
-	text-shadow: 5px #FFF;
+}
+
+#player_2_name {
+	color: #ffb700;
+	text-shadow: 2px 2px #FFF;
+
+}
+
+#player_2_num {
+	color: #FFF;
+	text-shadow: 5px 5px #ffb700;
+
 }
 
 .name {
 	margin-top: 40px;
+	font-size: 3em;
+	display: inline-block;
 }
 
 .number {
-	margin-top: 75px;
-	font-size: 6em;
+	margin-top: 16px;
+	font-size: 9em;
 
 }
 
 .score_board:hover {
 	opacity: .9;
+	height: 430px;
+  	width: 330px;
 }
 
-
+				/**************
+				Log in Pop ups
+				****************/
 .pop_up {
 	width: 100%;
 	height: 100%;
-	font-size: 100px;
-	background-color: black;
-	color: white;
 	position: absolute;
 	text-align: center;
-	z-index:100;
 
 }
 
@@ -120,28 +171,144 @@ h1 {
 	height: 300px;
 	width: 300px;
 	z-index:100;
-	postion: absolute;
+	text-align: center;
+	position: absolute;
 	top: 100px;
 	left: 537px;
 
 }
 
+.bgvideo {
+  height: 400px;
+  width: 600px;
+  position: absolute;
+  top: -30px;
+  left: -160px;
+
+}
+
+
 #charPage{
   height: 400px;
   width: 800px;
   z-index: 100;
-  postion: absolute;
+  position: absolute;
   top: 100px;
   left: 290px;
 
 }
 
-#newGame{
-	position: absolute;
-  top: -60px;
-  right: 678px;
+.logIn_h1 {
+	font-size: 2.5em;
+	color: #293203;
+	border-bottom-right-radius: 100px;
+	border-top-left-radius: 100px;
+	margin-top: 70px;
+	color: #6345a7;
+	border: 2px inset black;
+	text-shadow: -2px 5px 6px #FFF;
+	background: rgb(254,252,234); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
+				/**************
+				New game button
+				****************/
+
 #newGame {
-	
+	position: absolute;
+	top: -117px;
+	right: 651px;
+	height: 133px;
+	width: 131px;
+  	background-image: url('../img/nba_ball.png');
+  	background-size:cover;
+  	margin-top: 20px;
+  	opacity: .6;
 }
+#newGame:hover {
+	position: absolute;
+	top: -130px;
+	right: 651px;
+	opacity: 1;
+	height: 160px;
+	width: 160px;
+
+}
+
+				/**************
+				Winner Pop ups
+				****************/
+
+.pop_up2 {
+	width: 100%;
+	height: 100%;
+	font-size: 100px;
+	color: white;
+	position: absolute;
+	text-align: center;
+	background-color: black;
+	z-index:9999;
+
+}
+#player1 {
+	background-image: url('../img/player1_win.jpg');
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+#player2 {
+	background-image: url('../img/player2_win.jpg');
+}
+
+.winners {
+	margin-top: 300px;
+	text-shadow: 5px 5px #391361
+}
+
+				/**************
+				BOARDS
+				****************/
+.board {
+	width:200px;
+	height:50px;
+	background-color: black;
+	position:absolute;
+	font-size: 2.5em;
+	color: #6345a7;
+	/*border-radius: 20px;*/
+	text-align: center;
+	border: 5px double red;
+	text-shadow: -2px 5px 6px #FFF;
+	background: rgb(254,252,234); /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+#away{
+	top: 14px;
+  	left: 1051px;
+}
+
+#home{
+	top: 14px;
+  	left: 97px;
+}
+
+
+
+

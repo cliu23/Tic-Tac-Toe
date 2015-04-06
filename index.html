@@ -11,76 +11,121 @@
 
 <body ng-controller="TTTController as game">
 
-	<div class="pop_up" id="player1" ng-show="game.p1wins">
-		<p>Player 1 Wins!</p>
-			<button type="button" ng-click="game.playAgain()">Play Again
-			</button>
-		
-	</div><!--end of container pop up winner 1-->
-		
-	<div class="pop_up" id="player2" ng-show="game.p2wins">
-		<p>Player 2 Wins</p>
-			<button type="button" ng-click="game.playAgain()">Play Again
-			</button>
-		
-	</div><!--end of container pop up winner 2-->
+	<div id="transparent_page" ng-show="game.logIn">
+	</div>
+	
+			<!--Start of container pop up tied-->
 
-	<div class="pop_up" id="tie" ng-show="game.tie">
+	<div class="pop_up2" id="player1" ng-show="game.p1wins">
+		<p class="winners">Player 1 Wins!</p>
+			<button type="button" ng-click="game.playAgain()">Play Again
+			</button>
+		
+	</div>
+			<!--end of container pop up winner 1-->
+		
+	
+			<!--Start of container pop up tied-->
+
+	<div class="pop_up2" id="player2" ng-show="game.p2wins">
+		<p class="winners">Player 2 Wins</p>
+			<button type="button" ng-click="game.playAgain()">Play Again
+			</button>
+		
+	</div>
+			<!--end of container pop up winner 2-->
+
+	
+			<!--Start of container pop up tied-->
+
+	<div class="pop_up2" id="tie" ng-show="game.tie">
 		<p>Tie Game!</p>
 			<button type="button" ng-click="game.playAgain()">Play Again
 			</button>
 		
-	</div><!--end of container pop up tied-->
+	</div>
+			<!--end of container pop up tied-->
 	
+		
+			<!-- Nav bar -->
 		<nav>
-			<h1>Tic Tac Lakers</h1>
+			<h1 id="navHeader">Tic Tac Lakers</h1>
 		</nav>
+		
+			<!-- end of Nav bar -->
 
-
-
+			
 	<div id="main_container">
-			<button id="newGame" type="button" ng-click="game.newGame()">New Game</button>
 
-					<!--------------
-					     Pop ups 
-					---------------->
+
+				<!-- NEW GAME BUTTON -->
+
+			<span id="newGame" ng-click="game.newGame()"></span>
+
+				<!-- NEW GAME BUTTON ENDS-->
+
+					<!---------------------
+					     Pop up Log in boxes 
+					------------------------>
+
+		<div id="log_in" ng-show="game.logIn">
+			
+		<video autoplay loop muted class="bgvideo">
+			<source src="video/dunk.mp4" type="video/mp4">
+		</video>
+		</div>
 
 		<div class="pop_up" id="log_in" ng-show="game.logIn">
-			<input type="text" name="Player1" ng-model ="game.player1Name"><br>
+
+			<h1 class="logIn_h1"> Player 1</h1>
+			<input type="text" placeholder="First name" name="Player1" ng-model ="game.player1Name"><br>
+			<h1 class="logIn_h1"> Player 2</h1>
+
 			<input type="text" name="Player2" ng-model ="game.player2Name"><br>
 			<input type="submit" value="Submit" ng-click="game.signIn()">
 
-		</div>
-			<div class="pop_up" id="charPage" ng-show="game.nextPage">
-			<input type="text" name="Name"><br>
-			<input type="submit" value="Submit" ng-click="game.next()">
 
 		</div>
 
+			
+			<!-- End of pop up log in boxes -->
 
+			<!-- Beginning of score_board 1 -->
 
 		<div class ="score_board" id="player_1">
-		<h1 class="name">{{game.player1Name}}</h1>
-			<h2 class="number" ng-bind ="game.player1Wins">{{game.player1Wins}}</h2>
+		<h1 class="name" id="player_1_name">{{game.player1Name}}</h1>
+			<h2 class="number" id="player_1_num" ng-bind ="game.player1Wins">{{game.player1Wins}}</h2>
 		
-		</div> <!--End of score_board 1-->
+		</div> 
+
+				<!--End of score_board 1-->
 			
 		<div id="TTT_box">
+				
 
 			<div class="box" ng-repeat = "box in game.boxes" ng-click="game.click($index)">
 				<h1>{{box.move}}</h1>	
 
-			</div> <!--end of class box containr-->
+			</div> 
+
+				<!--end of class box containr-->
 		
 		</div> <!--end TTT Box-->
 		
-			
+			<!--Beginning of score_board 2-->
 		
-		<div class ="score_board" id="player_2">
-			<h1 class="name">{{game.player2Name}}</h1>
-			<h2 class ="number" ng-bind ="game.player2Wins">{{game.player2Num}}</h2>
+		<div class="board" id="home"><span>Home<span></div>
 
-		</div> <!--end of score_board container-->
+		<div class="board" id="away"><span>Away<span></div>
+
+		<div class ="score_board" id="player_2">
+			<h1 class="name" id="player_2_name">{{game.player2Name}}</h1>
+			<h2 class ="number" id="player_2_num" ng-bind ="game.player2Wins">{{game.player2Num}}</h2>
+
+		</div> <!--end of score_board 2 container-->
+		<div id="music_box">
+			<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/195085357&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+		</div>
 
 	</div> <!--End of Main Container-->
 		<!--Sourcing Angular-->
