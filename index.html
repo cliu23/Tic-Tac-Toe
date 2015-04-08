@@ -78,10 +78,10 @@
 		<div class="pop_up" id="log_in" ng-show="game.logIn">
 
 			<h1 class="logIn_h1"> Player 1</h1>
-			<input type="text" placeholder="First name" name="Player1" ng-model ="game.player1Name"><br>
+			<input type="text" placeholder="First Name" name="Player1" ng-model ="game.player1Name"><br>
 			<h1 class="logIn_h1"> Player 2</h1>
 
-			<input type="text" name="Player2" ng-model ="game.player2Name"><br>
+			<input type="text" name="Player2" placeholder="First Name" ng-model ="game.player2Name"><br>
 			<input type="submit" value="Submit" ng-click="game.signIn()">
 
 
@@ -104,7 +104,7 @@
 				
 
 			<div class="box" ng-repeat = "box in game.boxes" ng-click="game.click($index)">
-				<h1>{{box.move}}</h1>	
+				<h1 class ="box_h1">{{box.move}}</h1>	
 
 			</div> 
 

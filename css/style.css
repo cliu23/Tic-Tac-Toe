@@ -51,7 +51,6 @@ body {
 	width: 179px;
 	border-radius: 10px;
 	cursor: pointer;
-	font-size:4em;
 	text-align: center;
 	padding-top: 15px;
 }
@@ -60,6 +59,10 @@ body {
 	background: #f6c945;
 	opacity: .9;
 
+}
+.box_h1 {
+	font-size: 10em;
+	color:purple;
 }
 
 nav {
@@ -201,7 +204,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', end
 .logIn_h1 {
 	font-size: 2.5em;
 	color: #293203;
-	border-bottom-right-radius: 100px;
+	border-top-right-radius: 100px;
 	border-top-left-radius: 100px;
 	margin-top: 70px;
 	color: #6345a7;
@@ -309,6 +312,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', end
   	left: 97px;
 }
 
-
+input {
+	width: 289px;
+	height: 20px
+}
 
 
