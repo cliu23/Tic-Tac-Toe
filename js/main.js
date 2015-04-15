@@ -1,7 +1,7 @@
 // IIFE
 (function(){
 angular
-	.module('TTTApp', [])
+	.module('TTTApp', ['firebase']);
 
 	
 }) ();
